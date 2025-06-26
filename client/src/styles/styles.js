@@ -1,0 +1,37 @@
+
+const styles = {
+    taskItem: "flex items-center justify-between bg-gray-50 p-3 rounded-xl",
+    tag: "px-2 py-1 text-xs rounded-full",
+    noTag: "bg-orange-100 text-orange-600",
+    tagWork: "bg-blue-100 text-blue-600",
+    tagPersonal: "bg-green-100 text-green-600",
+    tagOther: "bg-purple-100 text-purple-600",
+    taskItemContent: 'flex items-center space-x-2 relative',
+    card: "flex items-center justify-center flex-col bg-white p-4 rounded-2xl shadow",
+    taskListContainer: "col-span-2 bg-white p-6 rounded-2xl shadow",
+    sectionTitle: "text-xl font-bold mb-2",
+    largeNumber: "flex items-center justify-center text-3xl font-bold text-yellow-500",
+    rootBlockContainer: "grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl",
+    form: 'flex mb-4',
+    input: 'block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 me-2',
+    validationErrorMsg: 'text-red-500 text-sm mt-1',
+    checkbox: 'form-check-input me-2',
+    checkboxChecked: 'line-through text-gray-500',
+    modal: 'fixed inset-0 bg-[#F6F4E7] bg-opacity-50 flex items-center justify-center z-50',
+    modalContent: 'bg-white rounded-lg shadow-xl p-6 w-full max-w-md mx-auto',
+    modalHeader: 'flex justify-between items-center border-b pb-3 mb-4',
+    modalTitle: 'text-xl font-semibold text-gray-800',
+    modalTextarea: 'w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 resize-y h-32',
+    modalCloseBtn: 'text-gray-500 hover:text-gray-700 focus:outline-none',
+    modalButtons: 'flex justify-end space-x-3',
+    modalCancelBtn: 'px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400',
+    modalSaveBtn: 'px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500',
+    addButton: "inline-flex items-center justify-center ml-2 px-4 py-2 font-semibold bg-green-500 text-white rounded-md shadow-sm hover:bg-green-700 transition",
+    buttonFilter: "px-4 py-2 bg-gray-200 rounded-xl",
+    buttonPrimary: "mt-2 w-full bg-blue-500 text-white py-2 rounded-xl",
+    buttonPrimaryCalendar: "w-full bg-blue-500 text-white py-2 rounded-xl flex items-center justify-center space-x-2",
+    pomodoroButton: "bg-gray-800 text-white px-4 py-2 mt-2 rounded-xl",
+    
+};
+
+export default styles;
