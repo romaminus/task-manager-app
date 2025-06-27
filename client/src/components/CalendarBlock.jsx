@@ -1,17 +1,19 @@
 import styles from "../styles/styles";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import { useState } from "react";
 
 function CalendarBlock() {
+    const [date, setDate] = useState(new Date());
+
     return (
         <div className={styles.card}>
-            <p className={styles.sectionTitle}>Calendar Integration</p>
-            <button className={styles.buttonPrimaryCalendar}>
-                <img 
-                    src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_24_2x.png" 
-                    alt="" 
-                    className="w-5 h-5"
-                />
-                <span>Sync with Google Calendar</span>
-            </button>
+            <p className={styles.sectionTitle}>Calendar</p>
+            <Calendar 
+                value={date} 
+                onChange={setDate} 
+                className="w-full mb-2 rounded-xl"
+            />
         </div>
     )
 }

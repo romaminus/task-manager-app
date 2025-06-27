@@ -2,7 +2,7 @@ import styles from "../styles/styles";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { deleteTask, toggleTask, updateTag } from "../redux/slices/tasksSlice";
 import { useState } from "react";
-import { openModal } from "../redux/slices/modalSlice";
+import { openModalEdit } from "../redux/slices/modalSlice";
 
 function TaskItem({ task }) {
     const { id, title, completed, tag } = task;
@@ -80,7 +80,7 @@ function TaskItem({ task }) {
             <div className={styles.taskItemContent}>
                 <button 
                     className={styles.modalCloseBtn}
-                    onClick={() => dispatch(openModal(id))}
+                    onClick={() => dispatch(openModalEdit(id))}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5h2m2.121 2.121l2.122 2.122M12 20h9M16.243 3.757a2 2 0 112.828 2.828L8.828 17.828a4 4 0 01-1.414.828l-4 1 1-4a4 4 0 01.828-1.414l10-10z" />

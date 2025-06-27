@@ -18,6 +18,7 @@ const tasksSlice = createSlice({
                 title: action.payload,
                 completed: false,
                 tag: 'choose tag',
+                points: 0,
             });
         },
         deleteTask: (state, action) => {

@@ -5,10 +5,12 @@ import TimerBlock from "./TimerBlock";
 import FormItem from "./FormItem";
 import styles from "../styles/styles";
 import EditModal from "./EditModal";
+import ModalAchievements from "./AchievementsModal";
+import ModalLeaderboard from "./LeaderboardModal";
 
 function RootBlock() {
     return (
-        <div className="bg-[#B9D0AA] p-6 min-h-screen flex justify-center items-center">
+        <div className={styles.appBg}>
             <div className={styles.rootBlockContainer}>
                 <div className={styles.taskListContainer}>
                     <FormItem />
@@ -16,10 +18,12 @@ function RootBlock() {
                 </div>
                 <div className="space-y-4">
                     <GamificationBlock />
-                    <CalendarBlock />
                     <TimerBlock />
+                    <CalendarBlock />
                 </div>
                 <EditModal />
+                <ModalAchievements />
+                <ModalLeaderboard />
             </div>
         </div>
     )

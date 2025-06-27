@@ -1,22 +1,27 @@
 import styles from "../styles/styles";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import { openModalAchievements, openModalLeaderboard } from "../redux/slices/modalSlice";
 
 function GamificationBlock() {
+    const dispatch = useAppDispatch();
+    const tasks = useAppSelector(state => state.tasks.data);
+    // temporary solution for points calculation
+    const totalPoints = tasks.filter(task => task.completed).length * 50;
+    
     return (
         <div className={styles.card}>
             <p className={styles.sectionTitle}>Gamification</p>
             <p className={styles.largeNumber}>
                 <span className="text-yellow-500">&#11088;</span>
-                2350
+                {totalPoints}
             </p>
             <button 
                 className={styles.buttonPrimary}
-                onClick={() => {
-                    localStorage.clear();
-                }}
+                onClick={() => dispatch(openModalAchievements())}
             >Achievements</button>
             <button 
                 className={styles.buttonPrimary}
-                // onClick={handleLeaderboard}
+                onClick={() => dispatch(openModalLeaderboard())}
             >Leaderboard</button>
         </div>
     )

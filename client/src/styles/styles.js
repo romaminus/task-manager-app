@@ -1,5 +1,6 @@
 
 const styles = {
+    appBg: 'bg-[#B9D0AA] p-6 min-h-screen flex justify-center items-center',
     taskItem: "flex items-center justify-between bg-gray-50 p-3 rounded-xl",
     tag: "px-2 py-1 text-xs rounded-full",
     noTag: "bg-orange-100 text-orange-600",
@@ -8,7 +9,7 @@ const styles = {
     tagOther: "bg-purple-100 text-purple-600",
     taskItemContent: 'flex items-center space-x-2 relative',
     card: "flex items-center justify-center flex-col bg-white p-4 rounded-2xl shadow",
-    taskListContainer: "col-span-2 bg-white p-6 rounded-2xl shadow",
+    taskListContainer: "col-span-2 bg-white p-5 rounded-2xl shadow",
     sectionTitle: "text-xl font-bold mb-2",
     largeNumber: "flex items-center justify-center text-3xl font-bold text-yellow-500",
     rootBlockContainer: "grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl",
@@ -17,7 +18,7 @@ const styles = {
     validationErrorMsg: 'text-red-500 text-sm mt-1',
     checkbox: 'form-check-input me-2',
     checkboxChecked: 'line-through text-gray-500',
-    modal: 'fixed inset-0 bg-[#F6F4E7] bg-opacity-50 flex items-center justify-center z-50',
+    modal: 'fixed inset-0 bg-[#DCE7D1] bg-opacity-50 flex items-center justify-center z-50',
     modalContent: 'bg-white rounded-lg shadow-xl p-6 w-full max-w-md mx-auto',
     modalHeader: 'flex justify-between items-center border-b pb-3 mb-4',
     modalTitle: 'text-xl font-semibold text-gray-800',
@@ -31,7 +32,7 @@ const styles = {
     buttonPrimary: "mt-2 w-full bg-blue-500 text-white py-2 rounded-xl",
     buttonPrimaryCalendar: "w-full bg-blue-500 text-white py-2 rounded-xl flex items-center justify-center space-x-2",
     pomodoroButton: "bg-gray-800 text-white px-4 py-2 mt-2 rounded-xl",
-    
+    timerButtons: "flex gap-2",
 };
 
 export default styles;
