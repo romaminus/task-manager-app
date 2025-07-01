@@ -1,0 +1,32 @@
+{
+  "tasks": {
+    "data": [
+      {
+        "id": 1751376681684,
+        "title": "Test from server",
+        "completed": true,
+        "tag": "work"
+      }
+    ],
+    "status": "succeeded",
+    "error": null,
+    "tag": [
+      "work",
+      "personal",
+      "other"
+    ]
+  },
+  "gamification": {
+    "points": 50,
+    "achievements": [
+      "Completed 5 tasks",
+      "Completed 10 tasks",
+      "Completed 15 tasks"
+    ],
+    "leaderboard": [
+      "Alice - 350 pts",
+      "You - 50 pts",
+      "Bob - 0 pts"
+    ]
+  }
+}

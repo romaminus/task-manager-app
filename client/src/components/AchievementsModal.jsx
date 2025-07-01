@@ -5,9 +5,22 @@ import { closeModalAchievements } from "../redux/slices/modalSlice";
 function ModalAchievements() {
     const dispatch = useAppDispatch();
     const { modalAchievements: { isOpen } } = useAppSelector(state => state.modal);
-
+    const { achievements, points } = useAppSelector(state => state.gamification);
     const handleClose = () => {
         dispatch(closeModalAchievements());
+    }
+    const calculateDoneTasks = (achievement) => {
+        const doneTasks = points / 50;
+        switch(achievement){
+            case 'Completed 5 tasks':
+                return doneTasks >= 5 ? ' - Done✅' : ' - In progress❌';
+            case 'Completed 10 tasks':
+                return doneTasks >= 10 ? ' - Done✅' : ' - In progress❌';
+            case 'Completed 15 tasks':
+                return doneTasks >= 15 ? ' - Done✅' : ' - In progress❌';
+            default:
+                return ' - In progress❌';
+        }
     }
     return (
         <>
@@ -20,13 +33,13 @@ function ModalAchievements() {
                     </div>
     
                     <ul className="list-disc pl-5 space-y-2">
-                        <li>Completed 5 tasks</li>
-                        <li>Completed 10 tasks</li>
-                        <li>3-day streak</li>
+                        {achievements.map((achievement, index) => (
+                            <li key={index}>{achievement} {calculateDoneTasks(achievement)}</li>
+                        ))}
                     </ul>
     
                     <div className={styles.modalButtons}>
-                        <button className={styles.modalCancelBtn} onClick={handleClose}>Close</button>
+                        <button className={styles.addButton} onClick={handleClose}>Close</button>
                     </div>
                 </div>
             </div>

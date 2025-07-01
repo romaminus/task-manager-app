@@ -5,10 +5,11 @@ import { closeModalLeaderboard } from "../redux/slices/modalSlice";
 function ModalLeaderboard() {
     const dispatch = useAppDispatch();
     const { modalLeaderboard: { isOpen } } = useAppSelector(state => state.modal);
-
+    let { leaderboard } = useAppSelector(state => state.gamification);
     const handleClose = () => {
         dispatch(closeModalLeaderboard());
     }
+    
     return (
         <>
             {isOpen && (
@@ -20,13 +21,13 @@ function ModalLeaderboard() {
                     </div>
     
                     <ol className="list-decimal pl-5 space-y-1">
-                        <li>Alice - 2500 pts</li>
-                        <li>Bob - 2200 pts</li>
-                        <li>You - 1900 pts</li>
+                        {leaderboard.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
                     </ol>
     
                     <div className={styles.modalButtons}>
-                        <button className={styles.modalCancelBtn} onClick={handleClose}>Close</button>
+                        <button className={styles.addButton} onClick={handleClose}>Close</button>
                     </div>
                 </div>
             </div>

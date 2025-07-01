@@ -14,9 +14,9 @@ function TasksList() {
             {/* <h2 className={styles.sectionTitle}>TO-DO LIST</h2> */}
             
             <ul id="task-list" className="space-y-3">
-                {filteredTasks.map(task => (
+                {filteredTasks.length !== 0 ? (filteredTasks.map(task => (
                     <TaskItem key={task.id} task={task} />
-                ))}
+                ))) : (<p className={'text-center text-gray-500 p-2'}>No items yet. Add first!</p>)}
             </ul>
             <div className="flex justify-around mb-2 space-x-2 mt-4">
                 <button 

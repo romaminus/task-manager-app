@@ -1,8 +1,8 @@
 import styles from "../styles/styles";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { deleteTask, toggleTask, updateTag } from "../redux/slices/tasksSlice";
 import { useState } from "react";
 import { openModalEdit } from "../redux/slices/modalSlice";
+import { fetchDeleteTask, fetchUpdateTask } from "../redux/thunks/tasksThunks";
 
 function TaskItem({ task }) {
     const { id, title, completed, tag } = task;
@@ -12,7 +12,7 @@ function TaskItem({ task }) {
     const [isTagListOpen, setIsTagListOpen] = useState(false);
 
     const handleToggle = () => {
-        dispatch(toggleTask(id));
+        dispatch(fetchUpdateTask({ id, completed: !completed }));
     };
 
     const handleChangeTagColor = (newTag) => {
@@ -29,9 +29,12 @@ function TaskItem({ task }) {
     };
 
     const handleTagChange = (newTag) => {
-        dispatch(updateTag({ id, tag: newTag }));
+        dispatch(fetchUpdateTask({ id, tag: newTag }));
         setIsTagListOpen(false);
         handleChangeTagColor(newTag);
+    };
+    const handleDeleteTask = () => {
+        dispatch(fetchDeleteTask(id));
     };
 
 
@@ -64,13 +67,13 @@ function TaskItem({ task }) {
 
                     {isTagListOpen && (
                         <ul className="absolute top-full left-0 mt-1 bg-white shadow-md rounded-lg z-10">
-                            {tags.map((k) => (
+                            {tags.map((t) => (
                                 <li 
-                                    key={k}
+                                    key={t}
                                     className="px-3 py-1 hover:bg-gray-100 cursor-pointer"
-                                    onClick={() => handleTagChange(k)}
+                                    onClick={() => handleTagChange(t)}
                                 >
-                                    {k}
+                                    {t}
                                 </li>
                             ))}
                         </ul>
@@ -88,7 +91,7 @@ function TaskItem({ task }) {
                 </button>
                 <button 
                     className={styles.modalCloseBtn}
-                    onClick={() => dispatch(deleteTask(id))}
+                    onClick={handleDeleteTask}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7h6m2 0H7m4-3h2a1 1 0 011 1v1H8V5a1 1 0 011-1h2z" />

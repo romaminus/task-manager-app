@@ -1,7 +1,7 @@
 
 const styles = {
     appBg: 'bg-[#B9D0AA] p-6 min-h-screen flex justify-center items-center',
-    taskItem: "flex items-center justify-between bg-gray-50 p-3 rounded-xl",
+    taskItem: "flex items-center justify-between bg-[#F7FCF5] p-3 rounded-xl",
     tag: "px-2 py-1 text-xs rounded-full",
     noTag: "bg-orange-100 text-orange-600",
     tagWork: "bg-blue-100 text-blue-600",
@@ -25,11 +25,9 @@ const styles = {
     modalTextarea: 'w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 resize-y h-32',
     modalCloseBtn: 'text-gray-500 hover:text-gray-700 focus:outline-none',
     modalButtons: 'flex justify-end space-x-3',
-    modalCancelBtn: 'px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400',
-    modalSaveBtn: 'px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500',
-    addButton: "inline-flex items-center justify-center ml-2 px-4 py-2 font-semibold bg-green-500 text-white rounded-md shadow-sm hover:bg-green-700 transition",
+    addButton: "inline-flex items-center justify-center ml-2 px-4 py-2 font-semibold bg-[#6B8E23] text-white rounded-md shadow-sm hover:bg-[#5C8033] transition",
     buttonFilter: "px-4 py-2 bg-gray-200 rounded-xl",
-    buttonPrimary: "mt-2 w-full bg-blue-500 text-white py-2 rounded-xl",
+    buttonPrimary: "mt-2 w-full bg-[#6A97A8] text-white py-2 rounded-xl hover:bg-[#3D5A80] transition",
     buttonPrimaryCalendar: "w-full bg-blue-500 text-white py-2 rounded-xl flex items-center justify-center space-x-2",
     pomodoroButton: "bg-gray-800 text-white px-4 py-2 mt-2 rounded-xl",
     timerButtons: "flex gap-2",

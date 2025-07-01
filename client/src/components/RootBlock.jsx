@@ -7,8 +7,18 @@ import styles from "../styles/styles";
 import EditModal from "./EditModal";
 import ModalAchievements from "./AchievementsModal";
 import ModalLeaderboard from "./LeaderboardModal";
+import { fetchAllTasks, fetchPoints } from "../redux/thunks/tasksThunks";
+import { useEffect } from "react";
+import { useAppDispatch } from "../redux/hooks";
 
 function RootBlock() {
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(fetchAllTasks());
+        dispatch(fetchPoints());
+    }, [dispatch]);
+
     return (
         <div className={styles.appBg}>
             <div className={styles.rootBlockContainer}>

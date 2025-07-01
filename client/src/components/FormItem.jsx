@@ -1,18 +1,19 @@
 import styles from "../styles/styles";
 import { useState } from "react";
-import { useAppDispatch } from "../redux/hooks";
-import { addTask } from "../redux/slices/tasksSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import { fetchAddTask } from "../redux/thunks/tasksThunks";
 
 function FormItem() {
     const [value, setValue] = useState("");
     const dispatch = useAppDispatch();
-
+    const { status } = useAppSelector(state => state.tasks);
     const handleSubmit = (e, value) => {
         e.preventDefault();
         if (value.trim()) {
-            dispatch(addTask(value));
-            setValue("");
-            // localStorage.clear()
+            dispatch(fetchAddTask({value}));
+            if (status === 'succeeded') {
+                setValue("");
+            }
         }
     };
     return (

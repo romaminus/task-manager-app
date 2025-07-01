@@ -1,0 +1,28 @@
+# Node modules
+node_modules
+dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.pnpm-store/
+
+# IDE and editor files
+.idea/             # JetBrains IDEs (IntelliJ, WebStorm, etc.)
+.vscode/           # VS Code
+*.iml              # IntelliJ IDEA
+*.swp              # Vim swap files
+*.swo              # Vim swap files
+.DS_Store          # macOS specific files
+Thumbs.db          # Windows specific files
+
+# Build artifacts
+/dist
+/build
+/out
+/tmp
+
+.sass-cache/
+.compass/

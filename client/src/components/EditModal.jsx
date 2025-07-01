@@ -2,7 +2,7 @@ import styles from "../styles/styles";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { closeModalEdit } from "../redux/slices/modalSlice";
 import { useState } from "react";
-import { editTask } from "../redux/slices/tasksSlice";
+import { fetchUpdateTask } from "../redux/thunks/tasksThunks";
 
 function EditModal() {
     const dispatch = useAppDispatch();
@@ -15,7 +15,7 @@ function EditModal() {
     };
 
     const handleSave = () => {
-        dispatch(editTask({ id, currentText }));
+        dispatch(fetchUpdateTask({ id, title: currentText }));
         setCurrentText('');
         dispatch(closeModalEdit());
     };
@@ -42,7 +42,7 @@ function EditModal() {
                         Скасувати
                     </button>
                     <button
-                        className={styles.modalSaveBtn}
+                        className={styles.addButton}
                         onClick={handleSave}
                         disabled={!currentText.trim()}
                     >

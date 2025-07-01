@@ -1,3 +1,5 @@
+
+
 export const fetchApi = async (url, method = 'GET', body = null) => {
     const response = await fetch(url, {
         method,
@@ -9,18 +11,18 @@ export const fetchApi = async (url, method = 'GET', body = null) => {
     return response.json();
 };
 
-export const getApi = async (url) => {
-    return fetchApi(url);
+export const getApi = async (url = '') => {
+    return fetchApi(`${url}`);
 };
 
 export const postApi = async (url, body) => {
-    return fetchApi(url, 'POST', body);
+    return fetchApi(`${url}`, 'POST', body);
 };
 
 export const putApi = async (url, body) => {
-    return fetchApi(url, 'PUT', body);
+    return fetchApi(`${url}`, 'PUT', body);
 };
 
-export const deleteApi = async (url, body) => {
-    return fetchApi(url, 'DELETE', body);
+export const deleteApi = async (url) => {
+    return fetchApi(`${url}`, 'DELETE');
 };
