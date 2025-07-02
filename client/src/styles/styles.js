@@ -31,6 +31,9 @@ const styles = {
     buttonPrimaryCalendar: "w-full bg-blue-500 text-white py-2 rounded-xl flex items-center justify-center space-x-2",
     pomodoroButton: "bg-gray-800 text-white px-4 py-2 mt-2 rounded-xl",
     timerButtons: "flex gap-2",
+    timerTitle: 'mt-2 text-sm text-gray-600',
+    taskButtonContainer: 'flex justify-around mb-2 space-x-2 mt-4',
+    tagList: 'absolute top-full left-0 mt-1 bg-white shadow-md rounded-lg z-10'
 };
 
 export default styles;

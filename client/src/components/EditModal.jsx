@@ -26,7 +26,7 @@ function EditModal() {
         <div className={styles.modal}>
             <div className={styles.modalContent}>
                 <div className={styles.modalHeader}>
-                    <h2 className={styles.modalTitle}>Редагувати завдання</h2>
+                    <h2 className={styles.modalTitle}>Edit Task</h2>
                     <button className={styles.modalCloseBtn} onClick={handleClose}>✕</button>
                 </div>
 
@@ -34,19 +34,19 @@ function EditModal() {
                     className={styles.modalTextarea}
                     value={currentText}
                     onChange={(e) => setCurrentText(e.target.value)}
-                    placeholder="Введіть новий текст завдання..."
+                    placeholder="Enter new task text..."
                 />
 
                 <div className={styles.modalButtons}>
                     <button className={styles.modalCancelBtn} onClick={handleClose}>
-                        Скасувати
+                        Cancel 
                     </button>
                     <button
                         className={styles.addButton}
                         onClick={handleSave}
                         disabled={!currentText.trim()}
                     >
-                        Зберегти
+                        Save
                     </button>
                 </div>
             </div>

@@ -65,7 +65,7 @@ function TimerBlock() {
                 <button className={styles.pomodoroButton} onClick={handleReset}>Reset</button>
             </div>
 
-            <p className="mt-2 text-sm text-gray-600">Completed Pomodoros: {pomodoroCount}</p>
+            <p className={styles.timerTitle}>Completed Pomodoros: {pomodoroCount}</p>
         </div>
     );
 }

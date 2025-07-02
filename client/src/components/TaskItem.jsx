@@ -66,7 +66,7 @@ function TaskItem({ task }) {
                     </span>
 
                     {isTagListOpen && (
-                        <ul className="absolute top-full left-0 mt-1 bg-white shadow-md rounded-lg z-10">
+                        <ul className={styles.tagList}>
                             {tags.map((t) => (
                                 <li 
                                     key={t}
