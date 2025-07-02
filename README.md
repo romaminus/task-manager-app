@@ -38,7 +38,7 @@ Installation & Run:
         npm install
         cd client
         npm install
-        cd client
+        cd server
         npm install
     3. Run the project:
         At the root of the project:
@@ -81,4 +81,3 @@ Contact:
     Gmail       - romaminus19@gmail.com
     LinkedIn    - https://www.linkedin.com/in/roman-belov-36268a214/
     Telegram    - @sofa_nerd
-    
