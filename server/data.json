@@ -5,7 +5,26 @@
         "id": 1751376681684,
         "title": "Test from server",
         "completed": true,
+        "tag": "personal"
+      },
+      {
+        "id": 1751465842647,
+        "title": "new one",
+        "completed": false,
+        "tag": "work",
+        "deleted": true
+      },
+      {
+        "id": 1751527241271,
+        "title": "ПОПАВСЯЯЯЯ !?",
+        "completed": false,
         "tag": "work"
+      },
+      {
+        "id": 1751527281130,
+        "title": "Розбійник 🤣",
+        "completed": false,
+        "tag": "other"
       }
     ],
     "status": "succeeded",
@@ -24,9 +43,9 @@
       "Completed 15 tasks"
     ],
     "leaderboard": [
-      "Alice - 350 pts",
-      "You - 50 pts",
-      "Bob - 0 pts"
+      "Alice - 250 pts",
+      "Bob - 150 pts",
+      "You - 50 pts"
     ]
   }
 }
